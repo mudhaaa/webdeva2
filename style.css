@@ -9,12 +9,6 @@
 /*hamburger menu*/
 .hamburger {
   display: none;
-  width: 35px;
-  cursor: pointer;
-  appearance: none;
-  background: none;
-  outline: none;
-  border: none;
 }
 .hamburger .bar,
 .hamburger:after,
@@ -40,7 +34,7 @@
   position: fixed;
   top: 50px;
   right: 100%;
-  width: 400px;
+  width: 500px;
   min-height: 100vh;
   display: block;
   z-index: 98;
@@ -274,6 +268,7 @@ p.leagueText {
 
 @media (max-width: 800px) {
   .hamburger {
+    margin:10px;
     display: block;
     width: 35px;
     cursor: pointer;
@@ -283,7 +278,7 @@ p.leagueText {
     border: none;
   }
   .hamburgerItems.is-active {
-    right: 20%;
+    right: 60%;
   }
   .mainMenu {
     display: none;
@@ -309,8 +304,11 @@ p.leagueText {
     flex-wrap: wrap;
   }
   /**/
+  .leagueCont img{
+    width:300px;
+  }
   p.leagueText{
-    width:400px;
+    width:360px;
   }
   /**/
   .penaltyImages {
