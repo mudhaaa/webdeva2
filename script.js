@@ -28,8 +28,8 @@ function hideAll() {
   penaltyPage.classList.remove("show");
 }
 
+//function to show selected page no
 function show(pageNo) {
-  //function to show selected page no
   hideAll();
   //show the page
   if (pageNo == 1) indexPage.classList.add("show");
@@ -65,37 +65,73 @@ page4mainbtn.addEventListener("click", function () {
 
 //league slideshow
 
-var slideIndex = 1;
-showDivs(slideIndex);
+//target league containers
+const league1 = document.getElementById("leagueContainer1");
+const league2 = document.getElementById("leagueContainer2");
+const league3 = document.getElementById("leagueContainer3");
+const league4 = document.getElementById("leagueContainer4");
+const league5 = document.getElementById("leagueContainer5");
+const league6 = document.getElementById("leagueContainer6");
 
-function plusDivs(n) {
-  showDivs((slideIndex += n));
-  console.log("PRESSED");
+//var for current slide index
+var currIndex = 1;
+
+function hideSlides(){
+  league1.classList.remove("is-active");
+  league2.classList.remove("is-active");
+  league3.classList.remove("is-active");
+  league4.classList.remove("is-active");
+  league5.classList.remove("is-active");
+  league6.classList.remove("is-active");
 }
 
-/*function showDivs(n) {
-  var i = 0;
-  var imagesList = document.querySelectorAll("#leagueImages");
+function showSlides(){
+  hideSlides();
+  //toggles container
+  if(currIndex == 1){
+    league1.classList.add('is-active');
+  }
+  if(currIndex == 2){
+    league2.classList.add('is-active');
+  }
+  if(currIndex == 3){
+    league3.classList.add('is-active');
+  }
+  if(currIndex == 4){
+    league4.classList.add('is-active');
+  }
+  if(currIndex == 5){
+    league5.classList.add('is-active');
+  }
+  if(currIndex == 6){
+    league6.classList.add('is-active');
+  }
+}
 
-  imagesList.forEach(image => {
-    if (n > imagesList.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = imagesList.length;
-    }
-    if(i!=n){
-      image.style.display = "none";
-      i++;
-    }
-    else{
-      image.style.display = "flex";
-    }
-  })
-}*/
+function changeSlide(n){
+  //increase index by n (left if negative, right if pos)
+  currIndex += n;
+  if(currIndex > 6){
+    currIndex = 1;
+  }
+  if(currIndex < 1){
+    currIndex = 6;
+  }
+  console.log("BALLS");
+}
 
-document.querySelector("#leftButton").addEventListener("click", plusDivs(-1));
-document.querySelector("#rightButton").addEventListener("click", plusDivs(+1));
+hideSlides();
+showSlides();
+
+//target left and right buttons for switching slides
+document.getElementById("leftButton").addEventListener("click", function () {
+  changeSlide(-1);
+  showSlides();
+});
+document.getElementById("rightButton").addEventListener("click", function () {
+  changeSlide(1);
+  showSlides();
+});
 
 //penalty game
 
