@@ -181,9 +181,18 @@ p.leagueText {
   font-size: large;
   width: 700px;
 }
-#leagueContainer img {
-  width: 500px;
+.leagueCont img {
+  width: 400px;
   margin: 20px;
+}
+.leagueCont.is-active{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.leagueCont{
+  display:none;
 }
 .leagueButtons {
   display: flex;
@@ -300,8 +309,8 @@ p.leagueText {
     flex-wrap: wrap;
   }
   /**/
-  p.indexText {
-    width: 400px;
+  p.leagueText{
+    width:400px;
   }
   /**/
   .penaltyImages {
