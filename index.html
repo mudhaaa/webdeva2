@@ -13,7 +13,7 @@
         <div class="mainMenu">
           <a id="mainMenuBtn1">HOME</a>
           <a id="mainMenuBtn2">HISTORY</a>
-          <a id="mainMenuBtn4">PENALTY</a>
+          <a id="mainMenuBtn4">GAME</a>
         </div>
         <button class="hamburger">
           <div class="bar">
@@ -22,7 +22,7 @@
         <nav class="hamburgerItems">
           <a id="hamMenuBtn1">HOME</a>
           <a id="hamMenuBtn2">HISTORY</a>
-          <a id="hamMenuBtn4">PENALTY</a>
+          <a id="hamMenuBtn4">GAME</a>
         </nav>
       </nav>
     </header>
@@ -45,6 +45,10 @@
       <div class="indexTweet">
         <blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">🚨🔴 EXCLUSIVE: Joshua Zirkzee to Manchester United, here we go!<br><br>Man United will NOT trigger the clause but pay slightly above €40m with better payment terms, in three years.<br><br>Zirkzee signs until June 2029 with option for further season.<br><br>First signing of INEOS new era. 🇳🇱 <a href="https://t.co/clTwvvgTC8">pic.twitter.com/clTwvvgTC8</a></p>&mdash; Fabrizio Romano (@FabrizioRomano) <a href="https://twitter.com/FabrizioRomano/status/1811410781927342328?ref_src=twsrc%5Etfw">July 11, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">🔴⚫️ AC Milan and Atlético Madrid will complete formal documents for Álvaro Morata deal in next 48h after €13m clause triggered.<br><br>Medical booked then signing deal until 2028.<br><br>AC Milan will focus on Tammy Abraham, Pavlović, Youssuf Fofana deals next.<br><br>Here we go, confirmed. 🇪🇸 <a href="https://t.co/beiMD3Y26v">pic.twitter.com/beiMD3Y26v</a></p>&mdash; Fabrizio Romano (@FabrizioRomano) <a href="https://twitter.com/FabrizioRomano/status/1812956197974053043?ref_src=twsrc%5Etfw">July 15, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <h1 class="indexText">CHECK IT OUT ON MOBILE!</h1>
+      <div class="qrCode">
+        <img src="Imagees/Untitled.png" alt="QR code" class="indexImage">
       </div>
     </div>
     <div class="page show" id="leagueContainer">
@@ -105,25 +109,19 @@
           The modern era has seen a continuation of the Dutch footballing tradition. Players like Virgil van Dijk, Frenkie de Jong, and Matthijs de Ligt have showcased their immense abilities in the Eredivisie before making high-profile moves to top European clubs. The league's focus on youth development remains a key factor in its success, ensuring a steady stream of promising players.</p>
       </div>
     </div>
-    <div class="page show" id="penaltyContainer">
-      <div class="penaltyImages">
-        <img src="Imagees/Zinedine Zidane - FootyRenders.png" alt="Zizou">
-        <img src="Imagees/CR7.png" alt="CR7">
-        <img src="Imagees/Neymar - FootyRenders.png" alt="Neymar">
+    <div class="page show" id="gameContainer">
+      <div class="gameImages">
+        <img src="Imagees/Manuel Neuer - FootyRenders.png" alt="Neuer">
+        <img src="Imagees/Alisson Becker - FootyRenders.png" alt="Allison">
+        <img src="Imagees/Emiliano Martinez - FootyRenders.png" alt="Martinez">
       </div>
-      <h1 class="penalyText"><bold>PENALTY CHALLENGE</bold>
-        <br>Think you can score a panenka like Zidane? Bang it top bins like Ronaldo? Or trick the keeper like Neymar?
-        <br>Then try your hand (or should I say foot) at our penalty game and see how many you can score!
-        <br><br>How to play: Press shoot at the right time when it will go into the back of the net.
+      <h1 class="penalyText"><bold>GOALKEEPERS</bold>
+        <br>Think you got the refelxes of many great goalkeepers like Manuel Neuer, Gianluigi Buffon and Allison?
+        <br>Then try your hand at this goalkeeper mminigame!
+        <br><br>How to play: Block all the oncoming shots that are being bounced around the field!
       </h1>
-      <div class="penaltyGame">
-        <div id="goal"></div>
-        <div id="goalkeeper"></div>
-        <div id="ball"></div>
+      <canvas id="game"></canvas>
 
-      </div>
-      <button id="shootButton">SHOOT!</button>
-      <button id="resetButton">Reset</button>
     </div>
   </body>
 </html>
