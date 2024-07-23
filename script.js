@@ -39,7 +39,7 @@ function show(pageNo) {
 
 //hide all other
 hideAll();
-show(4);
+show(1);
 
 /*Listen for clicks on the buttons, assign anonymous
 eventhandler functions to call show function*/
