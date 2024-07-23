@@ -145,6 +145,10 @@ p.indexText {
 a.indexMenuItems img {
   width: 400px;
 }
+.qrCode {
+  display: flex;
+  justify-content: center;
+}
 
 /*leagues*/
 #leagueContainer.show {
@@ -179,28 +183,30 @@ p.leagueText {
   width: 400px;
   margin: 20px;
 }
-.leagueCont.is-active{
-  display:flex;
+.leagueCont.is-active {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.leagueCont{
-  display:none;
+.leagueCont {
+  display: none;
 }
 .leagueButtons {
   display: flex;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   button {
     width: 100px;
+    height: 55px;
+    background-color: aqua;
   }
 }
 
-/*penalty*/
-#penaltyContainer.show {
+/*game*/
+#gameContainer.show {
   margin: 20px;
   background-color: white;
   display: flex;
@@ -209,17 +215,17 @@ p.leagueText {
   flex-direction: column;
   flex-wrap: wrap;
 }
-#penaltyContainer {
+#gameContainer {
   display: none;
 }
-.penaltyImages {
+.gameImages {
   display: flex;
   align-items: end;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.penaltyImages img {
+.gameImages img {
   width: 250px;
   margin: 10px;
 }
@@ -231,44 +237,41 @@ p.leagueText {
   padding: 20px;
   margin: 10px;
 }
-.penaltyGame {
-  margin: 20px;
-  background: linear-gradient(0deg, green, rgb(1, 253, 253));
-  height: 500px;
-
-  display: flex;
-  justify-content: center;
-}
-#goal {
-  content: "";
-  display: block;
+#game {
+  height:400px;
   width: 400px;
-  height: 200px;
-  background-color: grey;
-  margin: 7px 7px;
+  background: green;
+  margin:20px;
 }
-#goalkeeper {
-  width: 50px;
-  height: 100px;
-  background-color: black;
-  position: absolute;
-  right: 43%;
-  transform: translateX(-50%);
+#gameContainer button {
+  width: 100px;
+  height: 55px;
+  background-color: aqua;
+  margin: 20px;
 }
-
-#ball {
-  width: 50px;
+.gameButtons{
+  display: flex;
+  justify-content: space-evenly;
+}
+.ball {
+  position: relative;
+  top: 400px;
+  right: 250px;
   height: 50px;
-  background-color: red;
-  border-radius: 70px;
-  position: absolute;
-  right: 43%;
-  transform: translate(-50%, -50%);
 }
-
+.goal {
+  position: relative;
+  top: 0px;
+  right: -100px;
+}
+.dummy {
+  position: relative;
+  top: 100px;
+  right: 235px;
+}
 @media (max-width: 800px) {
   .hamburger {
-    margin:10px;
+    margin: 10px;
     display: block;
     width: 35px;
     cursor: pointer;
@@ -278,7 +281,7 @@ p.leagueText {
     border: none;
   }
   .hamburgerItems.is-active {
-    right: 60%;
+    right: -20px;
   }
   .mainMenu {
     display: none;
@@ -304,21 +307,21 @@ p.leagueText {
     flex-wrap: wrap;
   }
   /**/
-  .leagueCont img{
-    width:300px;
+  .leagueCont img {
+    width: 300px;
   }
-  p.leagueText{
-    width:360px;
+  p.leagueText {
+    width: 360px;
   }
   /**/
-  .penaltyImages {
+  .gameImages {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
   }
-  .penaltyImages img {
+  .gameImages img {
     width: 200px;
   }
 }
