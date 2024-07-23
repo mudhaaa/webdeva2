@@ -229,7 +229,7 @@ p.leagueText {
   width: 250px;
   margin: 10px;
 }
-.penalyText {
+.gameText {
   text-align: center;
   color: navy;
   font-size: x-large;
@@ -237,37 +237,13 @@ p.leagueText {
   padding: 20px;
   margin: 10px;
 }
+.gameCont{
+  display:flex;
+  justify-content: center;
+}
 #game {
-  height:400px;
-  width: 400px;
   background: green;
   margin:20px;
-}
-#gameContainer button {
-  width: 100px;
-  height: 55px;
-  background-color: aqua;
-  margin: 20px;
-}
-.gameButtons{
-  display: flex;
-  justify-content: space-evenly;
-}
-.ball {
-  position: relative;
-  top: 400px;
-  right: 250px;
-  height: 50px;
-}
-.goal {
-  position: relative;
-  top: 0px;
-  right: -100px;
-}
-.dummy {
-  position: relative;
-  top: 100px;
-  right: 235px;
 }
 @media (max-width: 800px) {
   .hamburger {
@@ -323,5 +299,8 @@ p.leagueText {
   }
   .gameImages img {
     width: 200px;
+  }
+  h1.gametext{
+    width: 400px;
   }
 }
