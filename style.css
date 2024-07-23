@@ -198,13 +198,12 @@ p.leagueText {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  button {
-    width: 100px;
-    height: 55px;
-    background-color: aqua;
-  }
 }
-
+button {
+  width: 100px;
+  height: 55px;
+  background-color: aqua;
+}
 /*game*/
 #gameContainer.show {
   margin: 20px;
